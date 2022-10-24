@@ -1,6 +1,6 @@
 # vaik-single-az-ec2-iac
 
-Fork when using
+This repository is Minimum sample for [technical tips](https://www.vaikobo.com/tips) explanation. <br>Please fork when using.
 
 [![Apply](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml)
 [![Destroy](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml)
