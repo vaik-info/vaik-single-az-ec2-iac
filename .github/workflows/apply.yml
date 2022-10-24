@@ -63,7 +63,7 @@ jobs:
           -var='target_region=${{ github.event.inputs.target_region }}' \
           -var='key_name=${{ secrets.EC2_KEY_NAME }}' \
           -var='ingress_ip=${{ secrets.Local_IP_Address }}' \
-          -var='ami_id=${{ github.event.inputs.ami_id }}'
+          -var='ami_id=${{ github.event.inputs.ami_id }}' -auto-approve
 
       - name: Output Terraform
         working-directory: terraform

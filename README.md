@@ -2,6 +2,9 @@
 
 Fork when using
 
+[![Apply](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml)
+[![Destroy](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml)
+
 ## Pre-requirements
 
 ### AWS resources
@@ -17,15 +20,20 @@ Fork when using
 
 GitHub->Settings->Secrets->Actions->New repository secret
 
-| Key                   |     Detail     |
-|:--------------:|:----:|
-| AWS_ACCESS_KEY_ID     | Ref. IAM User  |
-| AWS_SECRET_ACCESS_KEY | Ref. IAM User  |
-| Local_IP_ADDRESS      | (example)xxx.xxx.xxx.xxx/32  |
-| S3_BUCKET_NAME     | Ref. Backend S3 bucket  |
-| EC2_KEY_NAME        | Ref. Backend S3 bucket  |
+|          Key          |                Detail                |
+|:---------------------:|:------------------------------------:|
+|   AWS_ACCESS_KEY_ID   |            Ref. IAM User             |
+| AWS_SECRET_ACCESS_KEY |            Ref. IAM User             |
+|   LOCAL_IP_ADDRESS   |     (example)xxx.xxx.xxx.xxx/32      |
+|    S3_BUCKET_NAME     |  (example)example-single-az-ec2-iac  |
+|     EC2_KEY_NAME      |        (example)example             |
 
 --------
+## Run
+
+- [Apply](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml)
+- [Destroy](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml)
+
 
 --------
 
