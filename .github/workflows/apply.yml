@@ -71,6 +71,5 @@ jobs:
           EIP=` terraform output | grep -Eo 'ec2_eip\s*=\s*.*' `
           EIP_LIST=(${EIP//\"/ })
           EIP=${EIP_LIST[2]}
-          echo '### Login\n' >> $GITHUB_STEP_SUMMARY
-          echo '```ssh -i ~/.ssh/xxx.pem(Key pairs for EC2 ) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@' >> $GITHUB_STEP_SUMMARY
-          echo ${EIP}'```' >> $GITHUB_STEP_SUMMARY
+          echo '### Login' >> $GITHUB_STEP_SUMMARY
+          echo '```ssh -i ~/.ssh/xxx.pem(Key pairs for EC2 ) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@'${EIP}'```' >> $GITHUB_STEP_SUMMARY
