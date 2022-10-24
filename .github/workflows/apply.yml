@@ -66,8 +66,8 @@ jobs:
           -var='ami_id=${{ github.event.inputs.ami_id }}' -auto-approve
 
       - name: Output markdown
-          working-directory: terraform
-          run: |
+        working-directory: terraform
+        run: |
           EIP=` terraform output | grep -Eo 'ec2_eip\s*=\s*.*' `
           EIP_LIST=(${EIP//\"/ })
           EIP=${EIP_LIST[2]}
