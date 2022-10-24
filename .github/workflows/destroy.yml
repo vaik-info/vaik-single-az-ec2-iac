@@ -1,6 +1,7 @@
 name: Destroy
 on:
   workflow_dispatch:
+    inputs:
       s3_key:
         description: 'S3 Key'
         required: true
