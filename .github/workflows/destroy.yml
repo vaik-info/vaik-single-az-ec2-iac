@@ -36,8 +36,8 @@ jobs:
           terraform_version: 1.2.6
 
       - name: Destroy EC2 by Terraform
-        working-directory: base_terraform
-        id: apply_terraform
+        working-directory: terraform
+        id: destroy_terraform
         run: |
           terraform init -backend-config='bucket=${{ secrets.S3_BUCKET_NAME }}' \
           -backend-config='key=${{ github.event.inputs.s3_key }}' \
