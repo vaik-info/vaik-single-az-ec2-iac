@@ -2,8 +2,8 @@ name: Destroy
 on:
   workflow_dispatch:
     inputs:
-      default_region:
-        description: 'AMI default region'
+      target_region:
+        description: 'Deploy target region'
         required: true
         default: 'us-west-2'
       s3_key:
@@ -29,7 +29,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ github.event.inputs.default_region }}
+          aws-region: ${{ github.event.inputs.target_region }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:

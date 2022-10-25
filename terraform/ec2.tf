@@ -1,6 +1,6 @@
 resource "aws_instance" "ec2" {
   ami                         = var.ami_id
-  instance_type               = "g4dn.xlarge"
+  instance_type               = var.instance_type
   subnet_id                   = module.vpc.public_subnets[0]
   associate_public_ip_address = "true"
   key_name                    = var.key_name

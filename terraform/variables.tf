@@ -1,9 +1,3 @@
-variable "default_region" {
-  description = "Default Region"
-  type        = string
-  default = "us-west-2"
-}
-
 variable "target_region" {
   description = "Target Region"
   type        = string
@@ -32,4 +26,10 @@ variable "ami_id" {
   description = "AMI id"
   type        = string
   default = "ami-0f00ffaa05e2bd80e"
+}
+
+variable "instance_type" {
+  description = "Instance type"
+  type        = string
+  default = "g4dn.xlarge"
 }
