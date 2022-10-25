@@ -32,7 +32,6 @@ GitHub->Settings->Secrets->Actions->New repository secret
 | AWS_SECRET_ACCESS_KEY |            Ref. IAM User             |
 |   LOCAL_IP_ADDRESS   |     (example)xxx.xxx.xxx.xxx/32      |
 |    S3_BUCKET_NAME     |  (example)example-single-az-ec2-iac  |
-|     EC2_KEY_NAME      |        (example)example             |
 
 --------
 ## Run

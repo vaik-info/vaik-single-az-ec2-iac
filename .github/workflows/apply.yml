@@ -22,6 +22,10 @@ on:
         description: 'Deploy AMI ID'
         required: true
         default: 'ami-0f00ffaa05e2bd80e'
+      key_pair_name:
+        description: 'EC2 key pair'
+        required: true
+        default: 'vaik-single-az-ec2-iac'
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -54,13 +58,13 @@ jobs:
           -backend-config='region=${{ github.event.inputs.s3_region }}'
           
           terraform plan -var='target_region=${{ github.event.inputs.target_region }}' \
-          -var='key_name=${{ secrets.EC2_KEY_NAME }}' \
+          -var='key_name=${{ github.event.inputs.key_pair_name }}' \
           -var='ingress_ip=${{ secrets.Local_IP_Address }}' \
           -var='instance_type=${{ github.event.inputs.instance_type }}' \
           -var='ami_id=${{ github.event.inputs.ami_id }}'
           
           terraform apply -var='target_region=${{ github.event.inputs.target_region }}' \
-          -var='key_name=${{ secrets.EC2_KEY_NAME }}' \
+          -var='key_name=${{ github.event.inputs.key_pair_name }}' \
           -var='ingress_ip=${{ secrets.Local_IP_Address }}' \
           -var='instance_type=${{ github.event.inputs.instance_type }}' \
           -var='ami_id=${{ github.event.inputs.ami_id }}' -auto-approve
@@ -72,4 +76,4 @@ jobs:
           EIP_LIST=(${EIP//\"/ })
           EIP=${EIP_LIST[2]}
           echo '### Login' >> $GITHUB_STEP_SUMMARY
-          echo '```ssh -i ~/.ssh/xxx.pem(Key pairs for EC2 ) -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@'${EIP}'```' >> $GITHUB_STEP_SUMMARY
+          echo '```ssh -i ~/.ssh/xxx.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@'${EIP}'```' >> $GITHUB_STEP_SUMMARY
