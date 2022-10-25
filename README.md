@@ -1,9 +1,15 @@
 # vaik-single-az-ec2-iac
 
-This repository is minimum sample for [technical tips](https://www.vaikobo.com/tips) explanation. <br>Please fork when using.
+This repository is that deploys EC2 to a single az vpc with a github action as a trigger.<br>
+Please fork when using.<br>
+This repository is made for minimum sample for [technical tips](https://www.vaikobo.com/tips) explanation. 
 
 [![Apply](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/apply.yml)
 [![Destroy](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml/badge.svg)](https://github.com/vaik-info/vaik-single-az-ec2-iac/actions/workflows/destroy.yml)
+
+## Diagram
+
+![IaC-single_az](https://user-images.githubusercontent.com/116471878/197655845-5cf7f5be-50b3-475f-9752-7c85740c2638.png)
 
 ## Pre-requirements
 
