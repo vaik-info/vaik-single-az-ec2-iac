@@ -7,7 +7,7 @@ on:
         required: true
         default: 'us-west-2'
       s3_key:
-        description: 'S3 Key'
+        description: 'Backend S3 Key'
         required: true
         default: 'tfstate/terraform.tfstate'
       s3_region:
