@@ -4,7 +4,7 @@ module "vpc" {
 
   name                 ="${var.prefix}instance"
   cidr                 = "10.0.0.0/16"
-  azs                  = ["${var.target_region}a"]
+  azs                  = ["${data.aws_availability_zones.azs.names[0]}"]
   public_subnets       = ["10.0.4.0/24"]
   enable_nat_gateway   = false
   single_nat_gateway   = false
