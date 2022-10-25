@@ -76,4 +76,4 @@ jobs:
           EIP_LIST=(${EIP//\"/ })
           EIP=${EIP_LIST[2]}
           echo '### Login' >> $GITHUB_STEP_SUMMARY
-          echo '```ssh -i ~/.ssh/xxx.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@'${EIP}'```' >> $GITHUB_STEP_SUMMARY
+          echo '```ssh -i ~/.ssh/${{ github.event.inputs.key_pair_name }}.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@'${EIP}'```' >> $GITHUB_STEP_SUMMARY
