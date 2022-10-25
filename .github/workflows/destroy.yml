@@ -11,7 +11,7 @@ on:
         required: true
         default: 'tfstate/terraform.tfstate'
       s3_region:
-        description: 'S3 region'
+        description: 'Backend S3 region'
         required: true
         default: 'us-west-2'
 env:
