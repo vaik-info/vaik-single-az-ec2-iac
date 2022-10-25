@@ -23,7 +23,7 @@ on:
         required: true
         default: 'ami-0f00ffaa05e2bd80e'
       key_pair_name:
-        description: 'EC2 key pair'
+        description: 'EC2 key pair name'
         required: true
         default: 'vaik-single-az-ec2-iac'
 env:
