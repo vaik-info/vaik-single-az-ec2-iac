@@ -53,15 +53,13 @@ jobs:
           -backend-config='key=${{ github.event.inputs.s3_key }}' \
           -backend-config='region=${{ github.event.inputs.s3_region }}'
           
-          terraform plan -var='default_region=${{ github.event.inputs.default_region }}' \
-          -var='target_region=${{ github.event.inputs.target_region }}' \
+          terraform plan -var='target_region=${{ github.event.inputs.target_region }}' \
           -var='key_name=${{ secrets.EC2_KEY_NAME }}' \
           -var='ingress_ip=${{ secrets.Local_IP_Address }}' \
           -var='instance_type=${{ github.event.inputs.instance_type }}' \
           -var='ami_id=${{ github.event.inputs.ami_id }}'
           
-          terraform apply -var='default_region=${{ github.event.inputs.default_region }}' \
-          -var='target_region=${{ github.event.inputs.target_region }}' \
+          terraform apply -var='target_region=${{ github.event.inputs.target_region }}' \
           -var='key_name=${{ secrets.EC2_KEY_NAME }}' \
           -var='ingress_ip=${{ secrets.Local_IP_Address }}' \
           -var='instance_type=${{ github.event.inputs.instance_type }}' \
