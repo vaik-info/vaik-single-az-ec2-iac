@@ -9,7 +9,7 @@ This repository is made for minimum sample for [technical tips](https://www.vaik
 
 ## Diagram
 
-![IaC-single_az](https://user-images.githubusercontent.com/116471878/197655845-5cf7f5be-50b3-475f-9752-7c85740c2638.png)
+![IaC-single_az](https://user-images.githubusercontent.com/116471878/197667250-72aa472f-763c-4666-b822-c14960709203.png)
 
 ## Pre-requirements
 
