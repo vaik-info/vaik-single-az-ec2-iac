@@ -31,5 +31,5 @@ variable "ingress_ip" {
 variable "ami_id" {
   description = "AMI id"
   type        = string
-  default = "ami-0a4c632019a67b381"
+  default = "ami-0f00ffaa05e2bd80e"
 }

@@ -21,7 +21,7 @@ on:
       ami_id:
         description: 'Deploy AMI ID'
         required: true
-        default: 'ami-0a4c632019a67b381'
+        default: 'ami-0f00ffaa05e2bd80e'
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
