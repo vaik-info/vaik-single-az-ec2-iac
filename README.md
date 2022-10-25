@@ -19,7 +19,7 @@ This repository is made for minimum sample for [technical tips](https://www.vaik
 |:-------------------------------:|:---------------------------------------------------------------:|
 |            IAM User             | Attach EC2FullAccess/S3FullAccess(for Backend S3 bucket) Policy |
 |        Key pairs for EC2        |                      (example)example.pem                       |
-|          Target AMI ID          |                 (example) ami-0a4c632019a67b381                 |
+|          Target AMI ID          |                 (example) ami-0f00ffaa05e2bd80e                 |
 |        Backend S3 bucket        |             (example)s3://example-single-az-ec2-iac              |
 
 ### GitHubActions secrets
