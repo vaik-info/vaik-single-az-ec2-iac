@@ -25,7 +25,7 @@ on:
       key_pair_name:
         description: 'EC2 key pair name'
         required: true
-        default: 'vaik-single-az-ec2-iac'
+        default: 'vaik_single_az_ec2_iac.uswest1'
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
