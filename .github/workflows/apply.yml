@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       default_region:
-        description: 'AMI default region'
+        description: 'IAM default region'
         required: true
         default: 'us-west-2'
       target_region:
