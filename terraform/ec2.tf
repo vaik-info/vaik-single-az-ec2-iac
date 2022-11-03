@@ -5,6 +5,10 @@ resource "aws_instance" "ec2" {
   associate_public_ip_address = "true"
   key_name                    = var.key_name
   vpc_security_group_ids      = [aws_security_group.bastion.id]
+  root_block_device {
+    volume_type = "gp2"
+    volume_size = 100
+  }
   tags = {
     Name = "${var.prefix}-ec2"
   }
