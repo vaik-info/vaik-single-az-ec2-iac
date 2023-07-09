@@ -21,7 +21,7 @@ on:
       ami_id:
         description: 'Deploy AMI ID'
         required: true
-        default: 'ami-0f00ffaa05e2bd80e'
+        default: 'ami-01126ee2e34c5f04e'
       key_pair_name:
         description: 'EC2 key pair name'
         required: true
