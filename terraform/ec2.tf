@@ -7,7 +7,7 @@ resource "aws_instance" "ec2" {
   vpc_security_group_ids      = [aws_security_group.bastion.id]
   root_block_device {
     volume_type = "gp2"
-    volume_size = 100
+    volume_size = 200
   }
   tags = {
     Name = "${var.prefix}-ec2"
